@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>All Tags</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="container">
+<h1>All Tags</h1>
+<nav th:replace="fragments1 :: navigation"></nav>
+
+<p th:unless="${tags} and ${tags.size()}">No tags available!</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Tag Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tag : ${tags}">
+        <td>
+            <span th:text="${tag.name}"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/tags/create}">Create a New Tag</a>
+</body>
+</html>

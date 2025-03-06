@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>All Event Categories</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="container">
+<h1>All Event Categories</h1>
+<nav th:replace="fragments1 :: navigation"></nav>
+
+<p th:unless="${eventCategories} and ${eventCategories.size()}">No categories available!</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Category Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category : ${eventCategories}">
+        <td>
+            <a th:text="${category.name}" th:href="'/events?categoryId=' + ${category.id}"></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

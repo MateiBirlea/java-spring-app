@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create Tag</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Create Tag</h1>
+<nav th:replace="fragments1 :: navigation"></nav>
+
+<form method="post" th:action="@{/tags/create}" th:object="${tag}">
+    <label for="name">Tag Name:</label>
+    <input type="text" id="name" th:field="*{name}" placeholder="Enter Tag Name">
+    <p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    <input type="submit" value="Create Tag">
+</form>
+
+<a th:href="@{/tags}">Back to All Tags</a>
+</body>
+</html>

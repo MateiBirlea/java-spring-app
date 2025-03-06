@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Stilul pentru containerul principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigare */
+.nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.nav a {
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #007BFF;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+    color: white;
+    background-color: #0056b3;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Label */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+button,
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button:active,
+input[type="submit"]:active {
+    background-color: #003d80;
+    transform: scale(0.98);
+}
+
+/* Textarea */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Error Messages */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Lists */
+ul,
+ol {
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Table */
+/* Styling for Table Header Cells (th) */
+th {
+    background-color: #0044cc; /* Fundal albastru */
+    color: white; /* Text alb */
+    font-weight: bold; /* Text îngroșat */
+    text-align: left; /* Aliniere la stânga */
+    padding: 12px 15px; /* Spațiu interior */
+    text-transform: uppercase; /* Transformare text în majuscule */
+    border: 1px solid #ddd; /* Margine subțire */
+    font-size: 0.95rem; /* Dimensiunea fontului */
+}
+
+/* Styling for Table Rows (tr) */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fundal pentru rândurile pare */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Fundal alb pentru rândurile impare */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Fundal gri deschis la hover */
+    transition: background-color 0.3s ease; /* Tranziție pentru hover */
+}
+
+/* Styling for Table Data Cells (td) */
+td {
+    padding: 12px 15px; /* Spațiu interior */
+    text-align: left; /* Aliniere la stânga */
+    border: 1px solid #ddd; /* Margine subțire */
+    font-size: 0.95rem; /* Dimensiunea fontului */
+}
+
+/* Optional: Adding styles for table */
+table {
+    width: 100%; /* Lățime completă */
+    border-collapse: collapse; /* Elimină spațiul dintre celule */
+    margin-top: 20px; /* Spațiu deasupra tabelului */
+    background-color: white; /* Fundal alb */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+}
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer; /* Să sugereze interacțiunea */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    .nav a {
+        padding: 5px 10px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 0.9rem;
+    }
+}

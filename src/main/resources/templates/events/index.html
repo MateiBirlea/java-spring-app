@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coding Events</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="container">
+<h1>All Events</h1>
+<nav th:replace="fragments1 :: navigation"></nav>
+
+<!-- Afișare mesaj dacă nu există evenimente -->
+<p th:unless="${events} and ${events.size()}">No events!</p>
+
+<!-- Afișare lista de evenimente cu link -->
+<ul>
+    <li th:each="event : ${events}">
+        <a th:text="${event.name}"
+           th:href="@{/events/detail(eventId=${event.id})}"></a>
+    </li>
+</ul>
+
+</body>
+</html>
